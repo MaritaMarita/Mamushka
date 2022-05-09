@@ -9,7 +9,7 @@ public class Assign {
     private Integer id;
     private Usuario usuario;
     private Tarea tarea;
-    private boolean estado;
+    private Estado estado;
 
     public Assign() {
     }
@@ -38,11 +38,11 @@ public class Assign {
         this.tarea = tarea;
     }
 
-    public boolean isEstado() {
+    public Estado getEstado() {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
+    public void setEstado(Estado estado) {
         this.estado = estado;
     }
 
