@@ -1,7 +1,11 @@
 package com.austral.mamushka.demo.model;
 
-public class Usuario {
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "usuarios")
+public class Usuario {
+    @Id
     private Integer id;
     private String nombre;
     private String mail;
