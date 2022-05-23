@@ -1,7 +1,11 @@
 package com.austral.mamushka.demo.model;
 
-public class Tarea {
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "tareas")
+public class Tarea {
+    @Id
     private Integer id;
     private String nombre;
     private String description;
