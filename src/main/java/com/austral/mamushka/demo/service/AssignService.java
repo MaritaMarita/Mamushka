@@ -19,6 +19,7 @@ public class AssignService {
     public Assign agregar(Assign assign){
         return (Assign) assignRepository.save(assign);
     }
+
     public List<Assign> listar(){
         return assignRepository.findAll();
     }
