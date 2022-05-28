@@ -1,0 +1,14 @@
+com\austral\mamushka\demo\repository\UsuarioRepository.class
+com\austral\mamushka\demo\controller\AssignController.class
+com\austral\mamushka\demo\repository\AssignRepository.class
+com\austral\mamushka\demo\model\Assign.class
+com\austral\mamushka\demo\controller\TareaController.class
+com\austral\mamushka\demo\controller\UsuarioController.class
+com\austral\mamushka\demo\service\UsuarioService.class
+com\austral\mamushka\demo\service\AssignService.class
+com\austral\mamushka\demo\MamushkaApplication.class
+com\austral\mamushka\demo\model\Usuario.class
+com\austral\mamushka\demo\model\Tarea.class
+com\austral\mamushka\demo\service\TareaService.class
+com\austral\mamushka\demo\model\Estado.class
+com\austral\mamushka\demo\repository\TareaRepository.class
