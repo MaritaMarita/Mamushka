@@ -1,17 +1,18 @@
 import React from "react";
-import { Text, View, StyleSheet, Image, TextInput, TouchableOpacity, Button } from "react-native";
+import { Text, View, StyleSheet, Image, TouchableOpacity, Button } from "react-native";
 import image from './Images/sands.png';
 
-const Inicio = () => {
+
+const Inicio = ({navigation}) => {
     return(
         <View style={styles.container}>
             <Text style={styles.title}> Split & Smile </Text>
             <Image source={image} style={styles.image}
             />
-            <Button title="Login"/>
+            <Button onPress={() => navigation.navigate('Login')}title="Logueate"/>
             <View style={{flexDirection: 'row', marginTop:20}}>
                 <Text>No tenes una cuenta? </Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Register')}>
                     <Text style={styles.link}>Registrate</Text>
                 </TouchableOpacity>
             </View>

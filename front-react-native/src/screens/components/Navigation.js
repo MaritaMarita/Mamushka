@@ -13,9 +13,9 @@ const Navigation = () => {
     return(
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="Inicio" component={inicio}/>
-                <Stack.Screen name="Login" component={Login}/>
-                <Stack.Screen name="Register" component={Register}/>
+                <Stack.Screen name="Inicio" component={inicio} options={{headerShown: false}}/>
+                <Stack.Screen name="Login" component={Login} options={{headerShown: false}}/>
+                <Stack.Screen name="Register" component={Register} options={{headerShown: false}}/>
                 <Stack.Screen name="Home" component={Home}/>
             </Stack.Navigator>
         </NavigationContainer>
