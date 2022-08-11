@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import java.util.List;
 
 @Repository
-public interface TareaRepository<tarea> extends MongoRepository<Tarea, tarea> {
+public interface TareaRepository<tarea> extends MongoRepository<Tarea, String> {
 
     // List<Tarea> findById(Id);
 }

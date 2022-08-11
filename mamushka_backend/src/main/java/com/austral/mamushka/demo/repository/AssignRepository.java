@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface AssignRepository<assign> extends MongoRepository<Assign, assign> {
+public interface AssignRepository<assign> extends MongoRepository<Assign, String> {
 
     List<Assign> findAllByEstado(Estado estado);
 }

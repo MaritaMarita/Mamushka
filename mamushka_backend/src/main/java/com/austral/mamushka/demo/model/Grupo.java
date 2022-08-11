@@ -8,7 +8,7 @@ import java.util.List;
 @Document(collection = "grupos")
 public class Grupo {
     @Id
-    private Integer id;
+    private String id;
     private String nombre;
     private List<Usuario> usuarioList;
     private List<Tarea> tareaList;
@@ -18,11 +18,11 @@ public class Grupo {
     public Grupo() {
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
