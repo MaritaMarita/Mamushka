@@ -3,6 +3,8 @@ package com.austral.mamushka.demo.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
+
 @Document(collection = "usuarios")
 public class Usuario {
     @Id
@@ -10,6 +12,7 @@ public class Usuario {
     private String nombre;
     private String mail;
     private String password;
+    private List<Tarea> tareaList;
 
     public Usuario() {
     }
@@ -42,7 +45,9 @@ public class Usuario {
         return password;
     }
 
+    public List<Tarea> getTareaList() { return tareaList; }
 
+    public void setTareaList(List<Tarea> tareaList) { this.tareaList = tareaList; }
 
     @Override
     public String toString() {
@@ -50,6 +55,7 @@ public class Usuario {
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", mail='" + mail + '\'' +
+                ", tareaList='" + tareaList + '\'' +
                 '}';
     }
 }
