@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "tareas")
 public class Tarea {
     @Id
-    private Integer id;
+    private String id;
     private String nombre;
     private String description;
     private Integer score;
@@ -14,11 +14,11 @@ public class Tarea {
     public Tarea() {
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

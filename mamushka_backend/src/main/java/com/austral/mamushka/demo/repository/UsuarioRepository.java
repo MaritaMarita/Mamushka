@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import java.util.List;
 
 @Repository
-public interface UsuarioRepository<usuario> extends MongoRepository<Usuario, usuario> {
+public interface UsuarioRepository<usuario> extends MongoRepository<Usuario, String> {
 
     // List<Usuario> findById(Id);
 }
