@@ -11,6 +11,8 @@ public class Tarea {
     private String description;
     private Integer score;
 
+    private Estado estado;
+
     public Tarea() {
     }
 
@@ -46,6 +48,8 @@ public class Tarea {
         this.score = score;
     }
 
+    public Estado getEstado() { return estado; }
+    public void setEstado(Estado estado) { this.estado = estado; }
 
     @Override
     public String toString() {
@@ -54,6 +58,7 @@ public class Tarea {
                 ", nombre='" + nombre + '\'' +
                 ", description='" + description + '\'' +
                 ", score=" + score +
+                ", estado=" + estado +
                 '}';
     }
 }
