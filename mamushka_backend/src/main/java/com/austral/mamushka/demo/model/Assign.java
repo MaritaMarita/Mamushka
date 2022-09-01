@@ -9,7 +9,6 @@ public class Assign {
     private Integer id;
     private Usuario usuario;
     private Tarea tarea;
-    private Estado estado;
 
     public Assign() {
     }
@@ -38,13 +37,6 @@ public class Assign {
         this.tarea = tarea;
     }
 
-    public Estado getEstado() {
-        return estado;
-    }
-
-    public void setEstado(Estado estado) {
-        this.estado = estado;
-    }
 
     @Override
     public String toString() {
@@ -52,7 +44,6 @@ public class Assign {
                 "id=" + id +
                 ", usuario=" + usuario +
                 ", tarea=" + tarea +
-                ", estado=" + estado +
                 '}';
     }
 }
