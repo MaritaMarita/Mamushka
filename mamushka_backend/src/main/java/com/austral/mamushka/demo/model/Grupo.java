@@ -12,7 +12,6 @@ public class Grupo {
     private String nombre;
     private List<Usuario> usuarioList;
     private List<Tarea> tareaList;
-    private List<Assign> assignList;
 
 
     public Grupo() {
@@ -50,14 +49,6 @@ public class Grupo {
         this.tareaList = tareaList;
     }
 
-    public List<Assign> getAssignList() {
-        return assignList;
-    }
-
-    public void setAssignList(List<Assign> assignList) {
-        this.assignList = assignList;
-    }
-
     @Override
     public String toString() {
         return "Grupo{" +
@@ -65,7 +56,6 @@ public class Grupo {
                 ", nombre='" + nombre + '\'' +
                 ", usuarioList=" + usuarioList +
                 ", tareaList=" + tareaList +
-                ", assignList=" + assignList +
                 '}';
     }
 }
