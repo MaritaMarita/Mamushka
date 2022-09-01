@@ -10,8 +10,9 @@ public class Tarea {
     private String nombre;
     private String description;
     private Integer score;
-
     private Estado estado;
+
+    private Usuario usuario;
 
     public Tarea() {
     }
@@ -51,6 +52,9 @@ public class Tarea {
     public Estado getEstado() { return estado; }
     public void setEstado(Estado estado) { this.estado = estado; }
 
+    public Usuario getUsuario() { return usuario; }
+    public void setUsuario(Usuario usuario) { this.usuario = usuario; }
+
     @Override
     public String toString() {
         return "Tarea{" +
@@ -59,6 +63,7 @@ public class Tarea {
                 ", description='" + description + '\'' +
                 ", score=" + score +
                 ", estado=" + estado +
+                ", usuario=" + usuario +
                 '}';
     }
 }
