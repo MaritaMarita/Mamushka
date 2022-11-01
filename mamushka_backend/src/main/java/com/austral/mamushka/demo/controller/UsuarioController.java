@@ -1,11 +1,11 @@
 package com.austral.mamushka.demo.controller;
 
-import com.austral.mamushka.demo.model.Assign;
 import com.austral.mamushka.demo.model.Usuario;
 import com.austral.mamushka.demo.service.UsuarioService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin({"http://localhost:19006/"})
 @RestController
@@ -13,7 +13,7 @@ import java.util.List;
 
 public class UsuarioController {
 
-    private UsuarioService usuarioService;
+    private static UsuarioService usuarioService;
 
     public UsuarioController(UsuarioService usuarioService) { this.usuarioService = usuarioService;
     }
@@ -28,6 +28,8 @@ public class UsuarioController {
     @GetMapping
     public List<Usuario> listar(){
         return usuarioService.listar();
+    }
+    public static Optional usuario_por_id(String id){ return usuarioService.usuario_por_id();
     }
 
     /*

@@ -6,6 +6,7 @@ import com.sun.xml.bind.v2.model.core.ID;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UsuarioService {
@@ -24,14 +25,13 @@ public class UsuarioService {
         return usuarioRepository.findAll();
     }
 
-    // public List<Usuario> usuarios_por_id(){
-        //return usuarioRepository.findById(Usuario);}
+    public Optional usuario_por_id(){
+        return usuarioRepository.findById(Id);}
 
     public Iterable<Usuario> findById(
             Iterable<ID> ids
     ) {
         return null;
     }
-
 
 }

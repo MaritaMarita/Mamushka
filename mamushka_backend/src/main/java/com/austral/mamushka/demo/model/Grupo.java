@@ -17,8 +17,6 @@ public class Grupo {
     private List<DTOusuarioNombre> DTOusuarioNombreList;
 
 
-
-
     public Grupo() {
     }
 
