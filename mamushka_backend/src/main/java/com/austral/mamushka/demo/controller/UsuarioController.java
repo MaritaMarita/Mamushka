@@ -4,6 +4,7 @@ import com.austral.mamushka.demo.model.Usuario;
 import com.austral.mamushka.demo.service.UsuarioService;
 import org.springframework.web.bind.annotation.*;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,6 +19,8 @@ public class UsuarioController {
     public UsuarioController(UsuarioService usuarioService) { this.usuarioService = usuarioService;
     }
 
+
+    @Transactional
     @PostMapping
     public Usuario registrar(@RequestBody Usuario usuario){
         return usuarioService.agregar(usuario);

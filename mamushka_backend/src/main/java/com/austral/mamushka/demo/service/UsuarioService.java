@@ -6,6 +6,7 @@ import com.sun.xml.bind.v2.model.core.ID;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.Id;
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,6 +19,7 @@ public class UsuarioService {
         this.usuarioRepository = usuarioRepository;
     }
 
+    @Transactional
     public Usuario agregar(Usuario usuario){
         return (Usuario) usuarioRepository.save(usuario);
     }
