@@ -17,24 +17,26 @@ public class UsuarioController {
 
     public UsuarioController(UsuarioService usuarioService) { this.usuarioService = usuarioService;
     }
-    //@Operation(summary = "registramos un nuevo usuario")
 
     @PostMapping
     public Usuario registrar(@RequestBody Usuario usuario){
         return usuarioService.agregar(usuario);
     }
-    //@Operation(summary = "listamos los usuarios")
 
     @GetMapping
     public List<Usuario> listar(){
         return usuarioService.listar();
     }
-    public static Optional usuario_por_id(String id){ return usuarioService.usuario_por_id();
+
+    @GetMapping(value="/byNombre/{nombre}")
+    @ResponseBody
+    public List<Usuario> listByNombre (@PathVariable("nombre") String nombre){
+        return usuarioService.listarUsuarioNombre(nombre);
     }
 
-    /*
-    @GetMapping
-    public List<Usuario> usuarios_por_id(){ return usuarioService.usuarios_por_id();
+    @DeleteMapping
+    public Usuario delete (@RequestBody Usuario usuario){
+        return usuarioService.remove(usuario);
     }
-     */
+
 }

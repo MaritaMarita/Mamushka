@@ -5,13 +5,14 @@ import com.austral.mamushka.demo.repository.UsuarioRepository;
 import com.sun.xml.bind.v2.model.core.ID;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.Id;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class UsuarioService {
 
-    private final UsuarioRepository usuarioRepository;
+    private static UsuarioRepository usuarioRepository = null;
 
     public UsuarioService(UsuarioRepository usuarioRepository) {
         this.usuarioRepository = usuarioRepository;
@@ -25,8 +26,15 @@ public class UsuarioService {
         return usuarioRepository.findAll();
     }
 
-    public Optional usuario_por_id(){
-        return usuarioRepository.findById(Id);}
+    public static List<Usuario> listarUsuarioNombre(String nombre) {
+        return usuarioRepository.findUsuarioByNombre(nombre);
+    }
+
+    public static Usuario remove(Usuario usuario) {
+        usuarioRepository.delete(usuario);
+        return usuario;
+    }
+
 
     public Iterable<Usuario> findById(
             Iterable<ID> ids
